@@ -6,7 +6,7 @@ const httpServer = createServer();
 
 const io = new Server(httpServer, {
   cors: {
-    origin: ['http://localhost:3000'],
+    origin: '*',
   },
 });
 
@@ -16,6 +16,7 @@ io.on('connection', (socket) => {
   setInterval(() => {
     const randomLine = randomGenerator();
     socket.emit('DATA', randomLine);
+    // console.log(randomLine);
   }, 1000);
 
   socket.on('disconnect', () => {
