@@ -15,5 +15,12 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.20"
+  },
+  "keywords": [
+    "example",
+    "heroku"
+  ],
+  "engines": {
+    "node": "16.14.0"
   }
 }
