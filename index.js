@@ -24,5 +24,5 @@ io.on('connection', (socket) => {
   });
 });
 
-httpServer.listen(5001);
+httpServer.listen(process.env.PORT || 5000);
 console.log('server started');
