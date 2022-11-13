@@ -9,8 +9,11 @@ export default function randomGenerator() {
   const PITCH = (Math.random() * 360 - 180).toFixed(2);
   const ROLL = (Math.random() * 360 - 180).toFixed(2);
 
-  const LATITUDE = (Math.random() * 100).toFixed(6);
-  const LONGITUDE = (Math.random() * 100).toFixed(6);
+  const lat = -7.773684;
+  const long = 110.381798;
+
+  const LATITUDE = (Number(lat) + Number((Math.random() * 0.0002 - 0.0001))).toFixed(6);
+  const LONGITUDE = (Number(long) + Number((Math.random() * 0.0002 - 0.0001))).toFixed(6);
 
   const VOLTAGE = (Math.random() * 12).toFixed(2);
   const PRESSURE = (Math.random() * 100).toFixed(2);
